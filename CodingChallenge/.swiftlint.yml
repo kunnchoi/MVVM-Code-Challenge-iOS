@@ -1,0 +1,11 @@
+identifier_name:
+  allowed_symbols: "_"
+  min_length: 1 # only warning
+  max_length: 40 # warning
+
+disabled_rules:
+  - multiple_closures_with_trailing_closure
+  - line_length
+
+excluded:
+  - Pods

@@ -1,0 +1,66 @@
+{
+    "listingItems": [
+        {
+            "id": 1,
+            "name": "16lb Bag of Skittles",
+            "price": 16.00,
+            "imported": false,
+            "desc" : "Skittles Limited Edition Dark side Fun Size Bag"
+        },
+        {
+            "id": 2,
+            "name": "Walkman",
+            "price": 99.99,
+            "salesTax": 10.0,
+            "imported": false,
+            "desc" : "Superior Sound Quality: Enjoy your favourite music on the move with the Sony Walkman MP3 player."
+        },
+        {
+            "id": 3,
+            "name": "Microwave Popcorn Bag",
+            "price": 0.99,
+            "imported": false,
+            "desc" : "Act II Butter Lovers Popcorn is flavorful and healthy snack on movie night or when you want a delicious treat. It has 100 % whole grain."
+        },
+        {
+            "id": 4,
+            "name": "Bag of Vanilla-Hazelnut Coffee",
+            "price": 11.00,
+            "imported": true,
+            "desc": "Hazelnut Flavoured Instant Coffee"
+        },
+        {
+            "id": 5,
+            "name": "Vespa",
+            "price": 15001.25,
+            "salesTax": 10.0,
+            "imported": true
+        },
+        {
+            "id": 6,
+            "name": "Crate of Almond Snickers",
+            "price": 75.99,
+            "imported": true
+        },
+        {
+            "id": 7,
+            "name": "Discman",
+            "price": 55.00,
+            "imported": false,
+            "salesTax": 10.0
+        },
+        {
+            "id": 8,
+            "name": "Bottle of Wine",
+            "price": 10.00,
+            "imported": true,
+            "salesTax": 10.0
+        },
+        {
+            "id": 9,
+            "name": "Coffee",
+            "price": 997.99,
+            "imported": false
+        }
+    ]
+}

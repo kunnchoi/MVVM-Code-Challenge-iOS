@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xtB-eu-b4L">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cart-->
+        <scene sceneID="Glt-DQ-9qG">
+            <objects>
+                <viewController id="xtB-eu-b4L" customClass="CartViewController" customModule="CodingChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rpj-w3-b2B">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hlP-jD-h4P">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="xtB-eu-b4L" id="KEc-1F-DfM"/>
+                                    <outlet property="delegate" destination="xtB-eu-b4L" id="89s-hg-VTB"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5o-Xy-n8U">
+                                <rect key="frame" x="107" y="802" width="200" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.49803921569999998" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="1Sk-M0-fdB"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="GmA-1S-1xf"/>
+                                    <constraint firstAttribute="width" constant="200" id="Vmf-mB-qTI"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="YYO-CI-hrB"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="44" id="d0B-fn-uQy"/>
+                                    <constraint firstAttribute="height" constant="44" id="p0h-OZ-DSR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Checkout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="rl8-W8-Y0b" kind="show" id="Y8p-ur-Ice"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="5zq-Ey-4XZ">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="7Pb-Lq-63q"/>
+                                    <constraint firstAttribute="height" constant="20" id="CnX-gb-Yvp"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="R5o-Xy-n8U" firstAttribute="centerX" secondItem="spf-vo-Kfq" secondAttribute="centerX" id="BRX-Ji-TKH"/>
+                            <constraint firstItem="R5o-Xy-n8U" firstAttribute="top" secondItem="hlP-jD-h4P" secondAttribute="bottom" constant="16" id="CcJ-9Y-TZw"/>
+                            <constraint firstItem="spf-vo-Kfq" firstAttribute="bottom" secondItem="R5o-Xy-n8U" secondAttribute="bottom" constant="16" id="HXJ-KF-Ew4"/>
+                            <constraint firstItem="hlP-jD-h4P" firstAttribute="top" secondItem="rpj-w3-b2B" secondAttribute="top" id="Jg8-Bd-HFn"/>
+                            <constraint firstItem="5zq-Ey-4XZ" firstAttribute="centerY" secondItem="rpj-w3-b2B" secondAttribute="centerY" id="TAS-dZ-upX"/>
+                            <constraint firstItem="5zq-Ey-4XZ" firstAttribute="centerX" secondItem="rpj-w3-b2B" secondAttribute="centerX" id="UIf-fe-PIe"/>
+                            <constraint firstItem="hlP-jD-h4P" firstAttribute="trailing" secondItem="spf-vo-Kfq" secondAttribute="trailing" id="ZTU-DS-pBx"/>
+                            <constraint firstItem="hlP-jD-h4P" firstAttribute="leading" secondItem="spf-vo-Kfq" secondAttribute="leading" id="n7h-ru-MY4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="spf-vo-Kfq"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cart" id="rcQ-Lx-a36"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="5zq-Ey-4XZ" id="Oq2-pi-Bi6"/>
+                        <outlet property="checkOutButton" destination="R5o-Xy-n8U" id="FeP-mN-6y4"/>
+                        <outlet property="tableView" destination="hlP-jD-h4P" id="Vc5-cv-IuS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YZ1-8k-que" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989.85507246376824" y="61.607142857142854"/>
+        </scene>
+        <!--Receipt-->
+        <scene sceneID="FNJ-tc-5Bw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Receipt" id="rl8-W8-Y0b" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ter-vE-qmo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1656" y="42"/>
+        </scene>
+    </scenes>
+</document>

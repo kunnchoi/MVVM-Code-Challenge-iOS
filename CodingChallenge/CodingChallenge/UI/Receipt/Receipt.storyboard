@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DdJ-bq-NVD">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Checkout-->
+        <scene sceneID="XNb-bQ-baB">
+            <objects>
+                <viewController id="DdJ-bq-NVD" customClass="ReceiptViewController" customModule="CodingChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Oo-tM-rI2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xEG-db-mM9">
+                                <rect key="frame" x="0.0" y="88" width="414" height="698"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="DdJ-bq-NVD" id="SEX-Fq-5S0"/>
+                                    <outlet property="delegate" destination="DdJ-bq-NVD" id="NCq-Ul-4PL"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwx-D4-Arn">
+                                <rect key="frame" x="107" y="802" width="200" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.49803921569999998" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="G7Y-ek-KRp"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="GkY-5s-yvL"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="bqS-3M-p3m"/>
+                                    <constraint firstAttribute="height" constant="44" id="rYq-yD-tOY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Purchase">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="purchaseBtnClicked:" destination="DdJ-bq-NVD" eventType="touchUpInside" id="vMc-6J-cOc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xEG-db-mM9" firstAttribute="top" secondItem="OX5-Ol-maC" secondAttribute="top" id="Tdi-0I-aJx"/>
+                            <constraint firstItem="xEG-db-mM9" firstAttribute="trailing" secondItem="OX5-Ol-maC" secondAttribute="trailing" id="Vaa-E0-BvU"/>
+                            <constraint firstItem="xEG-db-mM9" firstAttribute="leading" secondItem="OX5-Ol-maC" secondAttribute="leading" id="dq2-gz-8Rn"/>
+                            <constraint firstItem="gwx-D4-Arn" firstAttribute="top" secondItem="xEG-db-mM9" secondAttribute="bottom" constant="16" id="g7E-Hl-MLk"/>
+                            <constraint firstItem="gwx-D4-Arn" firstAttribute="centerX" secondItem="OX5-Ol-maC" secondAttribute="centerX" id="hiR-Aq-tqj"/>
+                            <constraint firstItem="OX5-Ol-maC" firstAttribute="bottom" secondItem="gwx-D4-Arn" secondAttribute="bottom" constant="16" id="pZt-9B-tDu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OX5-Ol-maC"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Checkout" id="J0O-yx-eZK"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="xEG-db-mM9" id="ooU-mD-gzz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iq7-gI-dta" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1915.9420289855075" y="53.571428571428569"/>
+        </scene>
+    </scenes>
+</document>
